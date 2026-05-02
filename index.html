@@ -9,6 +9,12 @@
        [Fix5] onclick属性を全廃止 → DOMContentLoaded で addEventListener 登録
        [Fix6] updateIHBadges() を独立関数として定義
        [Fix7] renderHandScreen() 内の引き直しボタンを bindBtn() で登録
+     ★ v1.2 修正内容：
+       [Fix9]  settingsOpen() のトグルID生成バグ修正（'toggleDon6PP1' → 'toggleDon6P1'）
+       [Fix10] dpDoTrash() の loc 値を 'trash' から 'trash_<player>' に統一
+       [Fix11] dpDoHandToTrash / dpDoHandToDeckBtm でバトル画面の
+               trashバッジ・デッキカウントを更新するよう修正
+       [Fix12] CSS セレクタ #p2HandArea .life-cards → #p2HandCards に統一
 -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -627,7 +633,7 @@ html,body{height:100%;background:var(--bg);color:var(--txt);font-family:'Noto Sa
 <div class="scr act" id="scrSelect">
   <div class="hd">
     <div class="logo"><em>OP</em>·TCG BATTLE</div>
-    <div class="logo-ver">BATTLE v1.0</div>
+    <div class="logo-ver">BATTLE v1.2</div>
   </div>
   <div class="body">
     <div class="pad">
